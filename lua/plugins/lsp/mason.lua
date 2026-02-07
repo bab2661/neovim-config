@@ -13,6 +13,8 @@ return {
 	    "omnisharp",
 	    "pyright",
 	    "rust_analyzer",
+	    "html",
+	    "cssls"
 	},
     },
     config = function(_, opts)

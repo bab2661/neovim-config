@@ -14,7 +14,9 @@ return {
 		"c",
 		"java",
 		"vim",
-		"vimdoc"
+		"vimdoc",
+		"html",
+		"css"
 	    },
 	    auto_install = false,
 	})
