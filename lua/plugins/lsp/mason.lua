@@ -14,7 +14,8 @@ return {
 	    "pyright",
 	    "rust_analyzer",
 	    "html",
-	    "cssls"
+	    "cssls",
+	    "ts_ls"
 	},
     },
     config = function(_, opts)

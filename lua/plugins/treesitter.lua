@@ -1,6 +1,17 @@
 return {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
+    lazy = false,
+    init = function()
+	vim.treesitter.language.register("tsx", "javascriptreact")
+	vim.treesitter.language.register("tsx", "typescriptreact")
+	vim.api.nvim_create_autocmd("FileType", {
+	    pattern = { "javascriptreact", "typescriptreact" },
+	    callback = function(args)
+		vim.treesitter.start(args.buf, "tsx")
+	    end,
+	})
+    end,
     config = function()
 	local configs = require("nvim-treesitter.config")
 	configs.setup({
@@ -16,7 +27,9 @@ return {
 		"vim",
 		"vimdoc",
 		"html",
-		"css"
+		"css",
+		"javacript",
+		"tsx"
 	    },
 	    auto_install = false,
 	})
