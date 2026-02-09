@@ -16,7 +16,8 @@ return {
 		"vim",
 		"vimdoc",
 		"html",
-		"css"
+		"css",
+		"c_sharp"
 	    },
 	    auto_install = false,
 	})
